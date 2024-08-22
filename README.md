@@ -3,7 +3,7 @@
 ## Overview
 This repository hosts a workspace featuring a single project: __rl78-boot__. This project includes both the bootloader, which utilizes the Renesas Code Flash Self-Programming Library for RL78, and the application itself. The flashing process is performed via a serial port using the [XMODEM](https://en.wikipedia.org/wiki/XMODEM) protocol to ensure file transfer integrity.
 
-### Requirements
+## Requirements
 The bootloader project in this repo used the following software and hardware components
 - [IAR Embedded Workbench for Renesas RL78](https://iar.com/ewrl78) (V5.10.3)
 - [Renesas Code Flash Self-Programming Library for RL78](https://www.renesas.com/us/en/software-tool/code-flash-libraries-flash-self-programming-libraries) (T01, Ver.4.00)
@@ -17,7 +17,7 @@ The bootloader project in this repo used the following software and hardware com
 >- Newer versions might work with little or no modifications.
 >- Renesas Applilet3 for RL78 was used for setting up the involved peripherals. The configuration file [rl78-boot.cgp](rl78-boot/rl78-boot.cgp) is available, for reference.
 
-### Setup the YRPBRL78G13 board
+## Setup the YRPBRL78G13 board
 The Renesas Promotion Board for RL78 conveniently comes with a built-in Serial-to-USB adapter which simplifies the initial setup.
 
 1) Make sure the __Virtual UART__ is selected.
@@ -35,19 +35,19 @@ The Renesas Promotion Board for RL78 conveniently comes with a built-in Serial-t
 5) Use the Windows __Device Manager__ to find out if the device was properly recognized and, if so, which communications port was assigned to it (e.g. `COMx`).
 
 
-### Get the code
+## Get the code
 The __serial_bootloader__ workspace contains the __rl78-boot__ project and can be cloned directly (or downloaded):
 ```
 $ git clone https://github.com/iarsystems/ewrl78-bootloader
 ```
 
-### Connect to the serial port with Tera Term
+## Connect to the serial port with Tera Term
 1) Switch to the Tera Term.
 2) Open a new serial connection using the COMx.
 3) Set the serial port parameters to [115200-8-N-1](https://en.wikipedia.org/wiki/8-N-1).
 
 
-### Basic build with IAR Embedded Workbench
+## Build with IAR Embedded Workbench
 To build the project, perform the following steps:
 
 1) Install the RL78 FSL library (for IAR compiler version 2.10+):
@@ -68,8 +68,7 @@ In Tera Term, you should see the application `V1` running, with the LED blinking
 ![ttermpro_Xp3ncdaSA3](https://github.com/user-attachments/assets/05fed6b7-752d-4d3b-83e8-4230999e0828)
 
 
-
-### Updating the firmware
+## Updating the firmware
 1) In the project, modify the welcome string from `V1` to `V2` and rebuild the project (<kbd>F7</kbd>).
 2) The application can enter into its "bootloader mode". Press `b`:
 
@@ -110,6 +109,7 @@ ielftool --bin-multi="0x00000-0x00FFF;0x02000-0x0FFFF" "$TARGET_PATH$" "$EXE_DIR
 This build action will:
 1) Use the `IAR ELF Tool` to generate 2 binary files: one for `BOOT0_ROM` and another one for `APPLICATION`.
 2) Use the `copy /b` command to concatenate the generated binary files into a single `boot+app.bin` binary file.
+
 
 ## Issues
 For technical support contact [IAR Customer Support][url-iar-customer-support].
