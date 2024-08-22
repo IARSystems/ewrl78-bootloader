@@ -36,7 +36,7 @@ The Renesas Promotion Board for RL78 conveniently comes with a built-in Serial-t
 
 
 ### Get the code
-The __serial_bootloader__ workspace contains the __rl78_boot__ project and can be cloned directly (or downloaded):
+The __serial_bootloader__ workspace contains the __rl78-boot__ project and can be cloned directly (or downloaded):
 ```
 $ git clone https://github.com/iarsystems/ewrl78-bootloader
 ```
