@@ -30,8 +30,8 @@ The Renesas Promotion Board for RL78 conveniently comes with a built-in Serial-t
 | `J9`   | `2-3`         |
 
 2) Use the E1 Emulator 14-pin flat cable to connect to the board `J5` header.
-3) Use the other mini-B USB cable to connect the Renesas E1 emulator to another PC USB port.
-4) Use one mini-B USB cable to connect the `USB1` connector to a PC USB port.
+3) Use one mini-B USB cable to connect the Renesas E1 emulator to a PC USB port.
+4) Use another mini-B USB cable to connect the `USB1` connector to another PC USB port.
 5) Use the Windows __Device Manager__ to find out if the device was properly recognized and, if so, which communications port was assigned to it (e.g. `COMx`).
 
 
