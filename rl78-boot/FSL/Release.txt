@@ -1,0 +1,313 @@
+===============================================================================
+    Read me file for the RL78 Self-Programming Library T01
+===============================================================================
+
+The RL78 products are equipped with an internal firmware, which allows
+rewriting of the code flash memory without the use of an external programmer.
+Renesas provides the so called Self-Programming Library for RL78 devices, which
+offers an easy-to-use interface to the internal firmware functionality. By
+calling the Self-Programming Library functions from a user program, the 
+contents of the code flash memory can easily be rewritten in the field.
+
+
+========
+Contents
+========
+
+  1. Software Corrections and Updates
+  2. General Information
+  3. File Naming
+  4. Supported Devices
+  5. Operating Precautions
+  6. Support
+
+
+===================================
+1. Software Corrections and Updates
+===================================
+
+Installer Changes
+-----------------
+    V4.00
+    -----
+    - LLVM Compiler support added, installer contains the following libraries:
+        - RL78 FSL T01 V2.20 for CA78K0R environment
+        - RL78 FSL T01 V2.20 for IAR V1.xx environment
+        - RL78 FSL T01 V2.20 for GNU environment
+        - RL78 FSL T01 V2.21 for CC-RL environment
+        - RL78 FSL T01 V2.21 for IAR V2.xx environment
+        - RL78 FSL T01 V2.21 for LLVM environment
+ 
+    V3.00
+    -----
+    - Change to new installer
+    - Difference information of related documents
+      Please replace the following descriptions on target related documents.
+      with the "Library" part  of "3. File Naming".
+       - User Manual: Flash Self-programming Library Type T01
+         Document #: R01US0016ED0105
+         Difference: Cover   Installer name
+       - Differences Manual:
+                Flash Self-programming library Type T01, European Release 
+                Differences between the IAR V2.xx compiler version and 
+                the CC-RL compiler version
+         Document #: R20UT3541EJ0101
+         Difference: Page 14 "3.2 File Structure for IAR V2.xx tool chain"
+
+    old installer and ZIP package
+    -------------------------------
+
+    V1.00(ZIP package for IAR V2.xx)
+    --------------------------------
+    First official IAR V2.xx support for FSL T01 containing the following
+    libraries:
+        - RL78 FSL T01 for IAR V2.xx environment
+
+    E1.00a_IARV2(ZIP package for IAR V2.xx)
+    ---------------------------------------
+    Engineering release of FSL T01 containing the following libraries:
+        - RL78 FSL T01 WS(Equivalent to V2.21) for IAR V2.xx environment
+          (tested on IAR compiler V2.10.3)
+
+    V1.20
+    -----
+    CC-RL Compiler support added, installer contains the following libraries:
+        - RL78 FSL T01 V2.20 for CA78K0R environment
+        - RL78 FSL T01 V2.20 for IAR V1.xx environment
+        - RL78 FSL T01 V2.20 for GNU environment
+        - RL78 FSL T01 V2.21 for CC-RL environment
+    - device list updated
+
+    V1.11
+    -----
+    IAR Compiler V1.40 support added, installer contains the following libraries:
+        - RL78 FSL T01 V2.20 for CA78K0R environment
+        - RL78 FSL T01 V2.20 for IAR V1.xx environment
+        - RL78 FSL T01 V2.20 for GNU environment
+    - device list updated
+    
+    V1.10
+    -----
+    library update for reduction of RAM consumption, including GNU support:
+        - RL78 FSL T01 V2.20 for CA78K0R environment
+        - RL78 FSL T01 V2.20 for IAR V1.xx environment
+        - RL78 FSL T01 V2.20 for GNU environment
+    - device list updated
+
+    E1.10a
+    ------
+    engineering release of FSL T01 containing the following libraries:
+        - RL78 FSL T01 E2.20b for GNU environment
+
+    V1.01
+    -----
+    library update for F14/F13/G14 support containing the following libraries:
+        - RL78 FSL T01 V2.10 for CA78K0R environment
+        - RL78 FSL T01 V2.11 for IAR V1.xx environment
+    - device list updated
+
+    V1.0.0
+    ------
+    first official release of FSL T01 containing the following libraries:
+        - RL78 FSL T01 V2.10 for CA78K0R environment
+        - RL78 FSL T01 V2.10 for IAR V1.xx environment
+
+Library Changes
+---------------
+
+    CA78K0R
+    -------
+        V2.20
+        -----
+        - reduced memory consumption leading to a reduction of the size of
+          the prohibited RAM area for some devices
+        
+        V2.10
+        -----
+        - first official release of RL78 FSL T01
+    
+    IAR V1.xx
+    ---------
+        V2.20
+        -----
+        - reduced memory consumption leading to a reduction of the size of
+          the prohibited RAM area for some devices
+        - application built with Compiler feature "far runtime library calls" 
+          can now be linked together with the FSL library (IAR Compiler version
+          V1.40 onwards)
+
+        V2.11
+        -----
+        - support for devices with rl78_2 core (F14/F13/G14) added
+          (IAR V1.20 only)
+
+        V2.10
+        -----
+        - first official release of RL78 FSL T01
+
+    GNU
+    ---
+        V2.20
+        ------
+        - first official GNU port of RL78 FSL T01
+
+        E2.20b
+        ------
+        - tested engineering sample of RL78 FSL T01 (initial GNU port)
+
+    CC-RL
+    -----
+        V2.21
+        -----
+        - first official release of RL78 FSL T01 for CC-RL
+
+    IAR V2.xx (*)
+    -------------
+        V2.21
+        -----
+        - first official release of RL78 FSL T01
+        (*) FSL T01 for IAR V2.xx (except linker sample file) can also
+            be used with the IAR compiler V3.xx or later versions.
+
+        WS(Equivalent to V2.21)
+        -----------------------
+        - first engineering release of RL78 FSL T01
+
+    LLVM
+    ----
+        V2.21
+        -----
+        - first official release of RL78 FSL T01
+
+======================
+2. General Information
+======================
+
+The pre-compiled Self-Programming Library is delivered
+for the CA78K0R, CC-RL, IAR V1, IAR V2, GNU and LLVM development environments.
+
+Supported compilers are:
+
+CA78K0R
+-------
+    Library created on CA78K0R Compiler version:    V1.10
+    Library tested on CA78K0R Compiler version:     V1.41
+
+IAR
+---
+    Library created on IAR Compiler version:        V1.20
+    Library tested on IAR Compiler version:         V1.30
+    
+    Library created on IAR Compiler version:        V1.40
+    Library tested on IAR Compiler version:         V1.40
+
+    Library is identical to the FSL T01 for CC-RL.
+    Library tested on IAR Compiler version:         V2.10
+    Library tested on IAR Compiler version:         V3.10
+
+GNU
+---
+    Library created on GNU Compiler version:        V13.01
+    Library tested on GNU Compiler version:         V13.02
+
+CC-RL
+-----
+    Library created on CC-RL Compiler version:      V1.00.00
+    Library tested on CC-RL Compiler version:       V1.00.00
+
+LLVM
+----
+    Library is essentially identical to the FSL T01 for CC-RL.
+    Library tested on LLVM Compiler version:        V10.0.0.202310
+
+========================================
+3. File Naming
+========================================
+
+Installer
+---------
+    The installer file has the name RENESAS_RL78_FSL_Txx_{x}V{y}{z}.exe
+    e.g. RENESAS_RL78_FSL_Txx_3V00.exe
+
+    {x} This version digit will be incremented in case of major changes 
+        e.g. API changes
+    {y} This version digit will be incremented in case of medium or small scale 
+        addition and improvements
+    {z} This version digit will be incremented in case of bug fixes and internal 
+        Improvements
+
+Library
+-------
+    <<Folder: / >>
+        Release.txt                 <-  this information file
+        support.txt                 <-  library version information file
+
+    <<Folder: Compiler/lib>>
+        fsl.h                       <-  FSL interface definition (C compiler)
+                                        DO NOT CHANGE PLEASE
+        fsl.inc                     <-  FSL interface definition (assembler)
+                                        (CA78K0R, CC-RL only)
+                                        DO NOT CHANGE PLEASE
+        fsl_types.h                 <-  FSL header file, FSL types definition
+                                        DO NOT CHANGE PLEASE
+        fsl.lib, fsl.r87, fsl.a,    <-  pre-compiled library file
+        libfsl.a                        DO NOT CHANGE PLEASE
+
+    <<Folder: Compiler/Sample/C >>
+        fsl_sample_linker_file.dr       <-  sample linker file (CA78K0R only)
+                                            ADAPT DUE TO REQUIREMENTS
+        fsl_sample_linker_file_SCI.xcl  <-  sample linker file (IAR/GNU/LLVM only)
+        fsl_sample_linker_file_SCI.ld       (status check internal mode)
+        fsl_sample_linker_file_SCI.icf      ADAPT DUE TO REQUIREMENTS
+        fsl_sample_linker_file_SCU.xcl  <-  sample linker file (IAR/GNU/LLVM only)
+        fsl_sample_linker_file_SCU.ld       (status check user mode)
+        fsl_sample_linker_file_SCU.icf      ADAPT DUE TO REQUIREMENTS
+        fsl_sample_linker_file.sub      <-  sample linker file (CC-RL only)
+                                            ADAPT DUE TO REQUIREMENTS
+
+
+How to integrate
+----------------
+    1) copy all the files into your project subdirectory
+    2) add all fsl*.* files into your project (workbench or make-file)
+    3) adapt the sample linker file to your requirements
+    4) re-compile the project
+
+
+====================
+4. Supported Devices
+====================
+
+For the list of devices supported by this flash library please refer to the 
+RL78 family self RAM list of the Flash Self Programming Library (R20UT2944xxxx)
+
+
+========================
+5. Operating Precautions
+========================
+
+All devices and libraries
+-------------------------
+    - please refer to the related documentation
+     (R01US0016EDxxxx and R20UT3541EJxxxx)
+
+
+
+==========
+6. Support
+==========
+
+In case of any question please do not hesitate to contact:
+
+        Flash Support
+
+        Renesas Electronics Europe GmbH
+        Arcadiastr. 10
+        D-40472 Duesseldorf, Germany
+
+        email: application_support.flash-eu@lm.renesas.com
+
+
+===============================================================================
+  End of read me file for the RL78 Self-Programming Library T01
+===============================================================================

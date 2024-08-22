@@ -1,0 +1,29 @@
+===============================================================================
+Support information FSL T01
+===============================================================================
+
+============================
+Library version information
+============================
+    FSL T01
+    ----------
+    FSL T01 for CA78K0R             :V2.20
+    FSL T01 for CC-RL               :V2.21
+    FSL T01 for IAR(V2.xx)          :V2.21 (*)
+    FSL T01 for IAR(V1.2x)          :V2.20
+    FSL T01 for IAR(V1.4x)          :V2.20
+    FSL T01 for GNU                 :V2.20
+    FSL T01 for LLVM                :V2.21
+
+    (*) FSL T01 for IAR(V2.xx) (except linker sample file) can also
+        be used with the IAR compiler V3.xx or later versions.
+
+=============================
+Supported Devices information 
+=============================
+For the list of devices supported by this flash library please refer to the 
+RL78 family self RAM list of the Flash Self Programming Library (R20UT2944xxxx) 
+
+===============================================================================
+end of Support information FSL T01
+===============================================================================
