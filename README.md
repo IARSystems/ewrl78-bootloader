@@ -52,11 +52,11 @@ To build the project, perform the following steps:
 
 1) Install the RL78 FSL library (for IAR compiler version 2.10+):
    
-![image](https://github.com/user-attachments/assets/7e5f361f-cb4b-4711-a607-6862dbff740c)
+![RENESAS_RL78_FSL_T01_4V00_b7YSmzOmeE](https://github.com/user-attachments/assets/c68600ef-fd21-4b89-811f-2ba4edf86c73)
 
 2) Install it in the `<path-to>/ewrl78-bootloader/rl78-boot`. For example:
 
-  ![image](https://github.com/user-attachments/assets/38f00f0b-324c-4fcd-9a6c-06604f616a75)
+![RENESAS_RL78_FSL_T01_4V00_VhpvDVzf1I](https://github.com/user-attachments/assets/b293d807-fbc0-4e80-8581-5b9ba377cead)
 
 3) In the IAR Embedded Workbench, load the __serial_bootloader.eww__ workspace.
 4) Build the project (<kbd>F7</kbd>).
@@ -65,7 +65,7 @@ To build the project, perform the following steps:
 
 In Tera Term, you should see the application `V1` running, with the LED blinking on the board:
 
-![image](https://github.com/user-attachments/assets/4294afe0-baae-4b9a-9a07-84f9ed6caeca)
+![ttermpro_Xp3ncdaSA3](https://github.com/user-attachments/assets/05fed6b7-752d-4d3b-83e8-4230999e0828)
 
 
 
@@ -73,19 +73,19 @@ In Tera Term, you should see the application `V1` running, with the LED blinking
 1) In the project, modify the welcome string from `V1` to `V2` and rebuild the project (<kbd>F7</kbd>).
 2) The application can enter into its "bootloader mode". Press `b`:
 
-![image](https://github.com/user-attachments/assets/dba0b676-e469-4aed-b74e-916d2c8d2c49)
+![ttermpro_DL4BKeeTR4](https://github.com/user-attachments/assets/8669373b-0e0d-4b66-9545-6dff2acd3d07)
 
 3) The application is now in "bootloader mode" from where it is possible to download a new firmware. Press `1`:
 
-![image](https://github.com/user-attachments/assets/2d441b65-7ec9-43c1-b1ff-77d448014798)
+![ttermpro_prhwZFbfGH](https://github.com/user-attachments/assets/1233107d-fbd6-47a0-aa16-2404b9fe785c)
 
 4) Choose __File__ → __Transfer__ → __XMODEM__ → __Send...__, navigate to the file `Debug\Exe\boot+app.bin` and click __Send__:
 
-![image](https://github.com/user-attachments/assets/21e9b9f7-d9fe-4663-a33e-2108f6892d6a)
+![image](https://github.com/user-attachments/assets/61a88220-bc84-48ef-8cf1-6df975f9e6a1)
 
 Congratulations! The bootloader updated the application:
 
-![image](https://github.com/user-attachments/assets/4a0dd19e-003d-4809-97ed-28cd09a18eab)
+![ttermpro_MlC98a0swO](https://github.com/user-attachments/assets/714b0639-6243-4535-8dcd-3d7b957373d6)
 
 
 ## Memory layout
