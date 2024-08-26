@@ -54,9 +54,9 @@ To build the project, perform the following steps:
    
 ![RENESAS_RL78_FSL_T01_4V00_b7YSmzOmeE](https://github.com/user-attachments/assets/c68600ef-fd21-4b89-811f-2ba4edf86c73)
 
-2) Install it in the `<path-to>/ewrl78-bootloader/rl78-boot`. For example:
+2) Install it in the `<path-to>/ewrl78-bootloader/rl78-boot/FSL`. For example:
 
-![RENESAS_RL78_FSL_T01_4V00_VhpvDVzf1I](https://github.com/user-attachments/assets/b293d807-fbc0-4e80-8581-5b9ba377cead)
+![image](https://github.com/user-attachments/assets/6b32c5c1-9bda-4138-9474-2d23ff4cbb5c)
 
 3) In the IAR Embedded Workbench, load the __serial_bootloader.eww__ workspace.
 4) Build the project (<kbd>F7</kbd>).
