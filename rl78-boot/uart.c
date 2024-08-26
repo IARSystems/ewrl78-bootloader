@@ -45,8 +45,7 @@ bool UART_recv_byte(uint8_t *c)
 
 bool UART_recv_byte_timeout(uint32_t timeout_ms, uint8_t *data)
 {
-	g_timer_ticks_ms = timeout_ms;
-
+    g_timer_ticks_ms = timeout_ms;
     R_TAU0_Channel0_Start();
     (void)UART_recv(data, 1);
     while (!g_uart_rcvd && g_timer_ticks_ms > 0);
