@@ -9,18 +9,10 @@
 
 #include "uart.h"
 
-#define UART_send R_UART2_Send
-#define UART_recv R_UART2_Receive
-
 /* Global control flags */
 volatile bool g_uart_sent = false;
 volatile bool g_uart_rcvd = false;
 extern volatile uint32_t g_timer_ticks_ms;
-
-void UART_init(void)
-{
-    R_UART2_Start();
-}
 
 bool UART_send_string(const uint8_t str[])
 {

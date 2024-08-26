@@ -13,6 +13,10 @@
 
 #include "xmodem.h"
 
+#define UART_init R_UART2_Start
+#define UART_send R_UART2_Send
+#define UART_recv R_UART2_Receive
+
 /**
  * @brief   Initializes the UART.
  * @param   none.
