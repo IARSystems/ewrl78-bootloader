@@ -22,7 +22,7 @@
 
 /* User messages */
 uint8_t str_version[] = "\n\r\n\r**************************\n\r*** RL78 bootloader V1 ***";
-uint8_t str_menu[] = "\n\rChoose action\n\r[1]: Download new firmware...";
+uint8_t str_menu[] = "\n\rChoose action\n\r[1]: Download new firmware...\n\r[2]: Jump back to the app...";
 uint8_t str_command[] = "\n\rCOMMAND>";
 uint8_t str_dl_boot[] = "\n\rINPUT: Transfer boot+app.bin (XMODEM)...";
 uint8_t str_error_command[] = "\n\rERROR: Unrecognized command.";
@@ -71,6 +71,9 @@ void main_boot(void)
             default:
                 UART_send_string(str_upd_fail);
             }
+            break;
+        case '2':
+            FLASH_jump2app();
             break;
         case '?':
             UART_send_string(str_menu);
