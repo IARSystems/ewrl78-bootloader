@@ -65,26 +65,26 @@ To build the project, perform the following steps:
 
 In Tera Term, you should see the application `V1` running, with the LED blinking on the board:
 
-![ttermpro_Xp3ncdaSA3](https://github.com/user-attachments/assets/05fed6b7-752d-4d3b-83e8-4230999e0828)
+![image](https://github.com/user-attachments/assets/2399bb22-a1dd-4039-b179-c7f14cc6c7c3)
 
 
 ## Updating the firmware
-1) In the project, modify the welcome string from `V1` to `V2` and rebuild the project (<kbd>F7</kbd>).
+1) In the project, modify the welcome string from `V1` to `V2` in the [main-app.c](rl78-boot/main-app.c#L37) source file and rebuild the project (<kbd>F7</kbd>).
 2) The application can enter into its "bootloader mode". Press `b`:
 
-![ttermpro_DL4BKeeTR4](https://github.com/user-attachments/assets/8669373b-0e0d-4b66-9545-6dff2acd3d07)
+![image](https://github.com/user-attachments/assets/349db917-154f-4f02-a563-f671c627694c)
 
 3) The application is now in "bootloader mode" from where it is possible to download a new firmware. Press `1`:
 
-![ttermpro_prhwZFbfGH](https://github.com/user-attachments/assets/1233107d-fbd6-47a0-aa16-2404b9fe785c)
+![image](https://github.com/user-attachments/assets/e28a5790-e1c7-43a6-9e68-87b378f1c75e)
 
 4) Choose __File__ → __Transfer__ → __XMODEM__ → __Send...__, navigate to the file `Debug\Exe\boot+app.bin` and click __Send__:
 
-![image](https://github.com/user-attachments/assets/61a88220-bc84-48ef-8cf1-6df975f9e6a1)
+![image](https://github.com/user-attachments/assets/c0125767-d31e-49b8-95b8-04e7e7828e2f)
 
 Congratulations! The bootloader updated the application:
 
-![ttermpro_MlC98a0swO](https://github.com/user-attachments/assets/714b0639-6243-4535-8dcd-3d7b957373d6)
+![image](https://github.com/user-attachments/assets/1dba0444-95d2-47c5-b69a-c1b4206554e9)
 
 
 ## Memory layout
