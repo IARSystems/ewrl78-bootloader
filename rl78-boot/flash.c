@@ -14,7 +14,7 @@
 typedef void (*fun_ptr)(void);
 
 /* Functions */
-extern void main_app(void);
+extern void _iar_program_start(void);
 extern void main_boot(void);
 
 /* Global vars */
@@ -92,7 +92,7 @@ fsl_u08 FLASH_write_packet(fsl_u32 address, xm_packet_t *packet)
 
 void FLASH_jump2app(void)
 {
-  fun_ptr jump2app = (fun_ptr)((void *)&main_app);
+  fun_ptr jump2app = (fun_ptr)((void *)&_iar_program_start);
   jump2app();
 }
 
