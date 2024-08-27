@@ -29,6 +29,8 @@ void main_app(void)
     uint32_t timeout = initial_timeout;
     uint8_t threshold = ((max_value - min_value) / 20) % 0xFF;
 
+    TIMER_delay(750);
+
     UART_init();
 
     /* Init USER LED */
